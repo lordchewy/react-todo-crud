@@ -6,9 +6,9 @@ function TodoForm({addTodo}){
 
     const handleSubmit = event => {
         event.preventDefault();
-
-        addTodo(task)
-
+        if(task){
+            addTodo(task)
+        }
         setTask('')
     }
 
@@ -21,7 +21,7 @@ function TodoForm({addTodo}){
             onChange={(event)=> setTask(event.target.value)}
             value={task}
         />
-        <button type="submit" className="todo-btn">add task</button>
+        <button type="submit" className="todo-btn">Add ask</button>
     </form>
     )
 }
